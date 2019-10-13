@@ -1,15 +1,4 @@
 spring:
- eureka:
-  instance:
-    leaseRenewalIntervalInSeconds: 5
-    leaseExpirationDurationInSeconds: 2
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8001/eureka/
-    healthcheck:
-      enabled: true
-    lease:
-      duration: 5
  application:
   name: todo-list
  jpa:
@@ -20,5 +9,14 @@ spring:
    path: /h2-console
 server:
  port: 8000
-
- 
+eureka:        
+  instance:
+    leaseRenewalIntervalInSeconds: 5
+    leaseExpirationDurationInSeconds: 2
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    healthcheck:
+      enabled: true
+    lease:
+      duration: 5 
